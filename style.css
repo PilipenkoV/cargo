@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ! обнуление */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+/* Настройка основной оболочки */
+
+.wrapper__page {
+	max-width: 1920px;
+	margin: 0 auto;
+	background-color: #2F343A;
+	font-family: Roboto, sans-serif;
+}
+
+/* ! Стили для header */
+
+.header__top {
+	height: 45px;
+	background-color: #C8A35F;
+}
+
+.center {
+	width: 1110px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.headerwrap1 {
+	height: 45px;
+	line-height: 14px;
+}
+
+.header__top-lang span {
+	font-size: 1.2rem;
+	padding: 5px;
+	margin: 0 5px;
+	color: #fff;
+	border: 1px solid transparent;
+	transition: 0.5s linear;
+}
+
+.header__top-lang span:hover {
+	color: black;
+	border: 1px solid #000;
+}
+
+.header__top a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: #fff;
+	padding: 2px;
+	transition: 0.5s linear;
+}
+
+.header__top a:hover {
+	color: black;
+}
+
+.header__top-mail {
+	margin-right: 5px;
+}
+
+.header__bottom {
+	height: 100px;
+}
+
+.headerwrap2 {
+	height: 100px;
+}
+
+.logooffice {
+	display: flex;
+	align-items: center;
+}
+
+.wraplogo {
+	height: 50px;
+	width: 190px;
+	background-image: url(image/logo.png);
+	background-repeat: no-repeat;
+	background-size: 150px auto;
+	background-position: left center;
+	padding: 5px;
+	border-right: 1px solid #C8A35F;
+}
+
+.office {
+	padding: 5px;
+}
+
+.office a {
+	color: #fff;
+	font-size: 1.4rem;
+	line-height: 16px;
+	text-decoration: none;
+
+}
+
+.office a:hover {
+	text-decoration: underline;
+}
+
+.office i {
+	font-size: 1.6rem;
+	padding: 5px 15px 5px 5px;
+	margin-left: 30px;
+	color: #C8A35F;
+}
+
+.navigation ul {
+	list-style-type: none;
+}
+
+.navigation li {
+	display: inline-block;
+}
+
+.navigation a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	line-height: 16px;
+	margin-left: 30px;
+	transition: 0.5s linear;
+}
+
+.navigation a:hover {
+	text-decoration: underline;
+}
+
+/* ! Текстовый блок в хедере */
+
+.wrap__truck {
+	height: 100vh;
+	width: 100%;
+
+	max-height: 620px;
+	max-width: 1920px;
+	background-image: url(image/truck_background.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+.headerwrap3 {
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+	width: 100%;
+}
+
+
+.headertext {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	width: 920px;
+	height: 245px;
+	border: 1px solid #C8A35F;
+	color: #fff;
+}
+
+.headertext h1 {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 6rem;
+	padding: 10px;
+}
+
+.headertext p {
+	display: inline-block;
+	font-size: 1.8rem;
+	padding: 10px;
+	line-height: 1.5em;
+}
+
+/* ! Блок "АВТОПАРК" */
+
+.carpark {
+	height: 560px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.left,
+.right {
+	height: 560px;
+	width: 40%;
+	background-color: #393F47;
+}
+
+.car__text {
+	width: 45%;
+	margin-top: -50%;
+}
+
+/* ! Общий стиль для заглавия h2 всех секций */
+
+.car__text h2,
+.servicewrap h2,
+.aboutuswrap__text h2 {
+	color: #fff;
+	font-size: 4rem;
+	text-transform: uppercase;
+	padding: 5px 0 5px 0;
+	margin-top: 40px;
+	position: relative;
+}
+
+.car__text h2::before,
+.servicewrap h2::before,
+.aboutuswrap__text h2::before {
+	position: absolute;
+	content: '';
+	height: 6px;
+	width: 90px;
+	background-color: #C8A35F;
+	left: 0;
+	top: -30px;
+}
+
+/* ! конец стиля для заглавий */
+
+.car__text p {
+	color: #fff;
+	font-size: 1.6rem;
+	padding: 5px 0 5px 0;
+	margin-top: 20px;
+	text-align: justify;
+}
+
+.button {
+	width: 220px;
+	height: 55px;
+	background-color: #C8A35F;
+	border: none;
+	font-family: Roboto, sans-serif;
+	color: #fff;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	margin-top: 60px;
+}
+
+.car__foto {
+	width: 30%;
+	height: 350px;
+	margin-top: -40%;
+}
+
+.wrapcar {
+	height: 350px;
+}
+
+/* ! стили для слайдера блока АВТОПАРК */
+
+.slider img {
+	width: 445px;
+	height: 266px;
+}
+
+.slider {
+	width: 445px;
+	height: 266px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.slider-line {
+	width: 1335px;
+	height: 266px;
+
+	display: flex;
+	position: relative;
+	left: 0;
+	transition: all 1s ease;
+}
+
+.wrapcar button {
+	color: #fff;
+	background-color: #C8A35F;
+	border: 1px solid #C8A35F;
+	font-size: 1.1rem;
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+
+.wrapcar i {
+	font-size: 1.3rem;
+}
+
+/* ! закончили стили для слайдера */
+
+.wrapcar a {
+	font-size: 1.2rem;
+	color: #C8A35F;
+	text-decoration: none;
+	transition: all 0.3s linear;
+}
+
+.wrapcar a:hover {
+	transform: scale(1.25);
+}
+
+.wrapcar .fa-sharp {
+	margin: 0 5px 0 5px;
+}
+
+/* ! блок ПОСЛУГИ */
+
+.services {
+	height: 560px;
+	margin-top: 100px;
+}
+
+.services .servicewrap {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.services__box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.service__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 270px;
+	height: 12em;
+	margin: 5px auto;
+	background-color: #393F47;
+	transition: all 0.5s linear;
+}
+
+.service__item:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.service__item a {
+	color: #fff;
+	font-size: 14px;
+}
+
+.service__item i {
+	font-size: 35px;
+	margin-bottom: 0.7em;
+}
+
+/* ! блок "ПРО НАС" */
+
+.aboutus {
+	height: 560px;
+	margin-top: 100px;
+}
+
+.aboutus .backside {
+	height: 480px;
+	width: 410px;
+	background-color: #393F47;
+	margin: 0 auto;
+}
+
+.aboutuswrap {
+	margin-top: -400px;
+}
+
+.aboutuswrap__text {
+	height: 300px;
+	width: 40%;
+}
+
+.aboutuswrap__text p {
+	color: #fff;
+	font-size: 1.6rem;
+	padding: 5px 0 5px 0;
+	margin-top: 20px;
+	text-align: justify;
+	text-indent: 1em;
+}
+
+.aboutuswrap__foto {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	height: 300px;
+	width: 40%;
+}
+
+.foto_item {
+	border: 1px solid #C8A35F;
+	background-color: #fff;
+	width: 145px;
+	height: 145px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+
+.foto_item h3 {
+	font-size: 3.5rem;
+	margin-bottom: 10px;
+}
+
+.foto_item p {
+	font-size: 1.3rem;
+}
+
+.foto_truck {
+	background-image: url(image/truck_mini.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+/* ! стили для КАРТЫ */
+
+.wrapmap {
+	max-width: 1920px;
+}
+
+/* ! стили для футера */
+
+.footer {
+	min-height: 100px;
+	background-color: #C8A35F;
+	display: flex;
+	align-items: center;
+	margin-top: -10px;
+}
+
+.footerwrap {
+	height: 75px;
+}
+
+.footerwrap__left,
+.footerwrap__right {
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+
+.footerwrap__left .wraplogo {
+	border-right: none;
+	flex: 1 1 33%;
+	margin-left: 5px;
+}
+
+.address {
+	flex: 3 1 66%;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+.address p {
+	font-size: 1.4rem;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.address a {
+	font-size: 1.4rem;
+	color: #fff;
+	transition: 0.5s linear;
+}
+
+.address a:hover {
+	color: #2F343A;
+}
+
+.phone,
+.copyright {
+	flex: 1 1 50%;
+	margin-left: 5px;
+}
+
+.phone p,
+.phone a {
+	font-size: 1.4rem;
+	color: #fff;
+	transition: 0.5s linear;
+}
+
+.phone a:hover {
+	color: #2F343A;
+}
+
+.phone :first-child {
+	margin-bottom: 5px;
+}
+
+.copyright {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 5px;
+}
+
+.copyright p,
+.copyright a {
+	font-size: 1.4rem;
+	color: #2F343A;
+	transition: 0.5s linear;
+}
+
+.copyright a:hover {
+	color: #fff;
+}
