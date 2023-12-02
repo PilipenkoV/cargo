@@ -10,12 +10,17 @@
 }
 
 /* Настройка основной оболочки */
+body {
+	background-color: #393F47;
+}
 
 .wrapper__page {
-	max-width: 1920px;
+	max-width: 1400px;
 	margin: 0 auto;
+	padding: 5px;
 	background-color: #2F343A;
 	font-family: Roboto, sans-serif;
+	border: 1px solid #2F343A;
 }
 
 /* ! Стили для header */
@@ -26,11 +31,12 @@
 }
 
 .center {
-	width: 1110px;
+	/* width: 1110px; */
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .headerwrap1 {
@@ -51,6 +57,15 @@
 	color: black;
 	border: 1px solid #000;
 }
+
+.lang--active span {
+	border-color: rgba(30, 30, 30, 0.5);
+	background-color: rgba(30, 30, 30, 0.5);
+}
+
+/* .lang--active a {
+	color: black;
+} */
 
 .header__top a {
 	font-size: 1.2rem;
@@ -142,7 +157,7 @@
 .wrap__truck {
 	height: 100vh;
 	width: 100%;
-
+	padding: 5px;
 	max-height: 620px;
 	max-width: 1920px;
 	background-image: url(image/truck_background.png);
@@ -160,13 +175,13 @@
 
 .headertext {
 	display: flex;
-	flex-flow: column wrap;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 920px;
-	height: 245px;
+	max-width: 920px;
 	border: 1px solid #C8A35F;
 	color: #fff;
+	text-align: center;
 }
 
 .headertext h1 {
@@ -186,22 +201,31 @@
 /* ! Блок "АВТОПАРК" */
 
 .carpark {
-	height: 560px;
+	height: 500px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	position: relative;
 }
 
 .left,
 .right {
-	height: 560px;
-	width: 40%;
+	height: 100%;
+	width: clamp(250px, 40%, 550px);
 	background-color: #393F47;
 }
 
+.car {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+}
+
 .car__text {
-	width: 45%;
-	margin-top: -50%;
+	/* width: 45%; */
+	width: clamp(250px, 45%, 500px);
 }
 
 /* ! Общий стиль для заглавия h2 всех секций */
@@ -239,6 +263,10 @@
 	text-align: justify;
 }
 
+button {
+	cursor: pointer;
+}
+
 .button {
 	width: 220px;
 	height: 55px;
@@ -252,14 +280,16 @@
 }
 
 .car__foto {
-	width: 30%;
+	width: clamp(250px, 45%, 500px);
+	/* width: 50%; */
 	height: 350px;
-	margin-top: -40%;
+	/* margin-top: -40%; */
+	overflow: hidden;
 }
 
-.wrapcar {
+/* .wrapcar {
 	height: 350px;
-}
+} */
 
 /* ! стили для слайдера блока АВТОПАРК */
 
@@ -318,7 +348,6 @@
 /* ! блок ПОСЛУГИ */
 
 .services {
-	height: 560px;
 	margin-top: 100px;
 }
 
@@ -442,24 +471,25 @@
 }
 
 .footerwrap {
-	height: 75px;
+	width: 100%;
+	text-shadow: 1px 1px 3px #000;
 }
 
 .footerwrap__left,
 .footerwrap__right {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 	width: 50%;
 }
 
 .footerwrap__left .wraplogo {
 	border-right: none;
-	flex: 1 1 33%;
 	margin-left: 5px;
 }
 
 .address {
-	flex: 3 1 66%;
 	padding: 5px;
 	margin-left: 5px;
 }
@@ -482,7 +512,6 @@
 
 .phone,
 .copyright {
-	flex: 1 1 50%;
 	margin-left: 5px;
 }
 
@@ -516,4 +545,160 @@
 
 .copyright a:hover {
 	color: #fff;
+}
+
+/* ! ==================== media ==================== */
+
+@media (max-width: 900px) {
+
+	.carpark {
+		height: 720px;
+	}
+
+	.car {
+		top: 5%;
+		flex-direction: column;
+	}
+
+	.car__text {
+		padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 790px) {
+
+	.headertext h1 {
+		font-size: 4rem;
+	}
+
+	.car__text h2,
+	.servicewrap h2,
+	.aboutuswrap__text h2 {
+		font-size: 3rem;
+	}
+
+	.headertext p,
+	.car__text p,
+	.aboutuswrap__text p {
+		font-size: 1.4rem;
+	}
+
+	.car__foto {
+		width: 90%;
+	}
+
+	.slider img {
+		width: 400px;
+		height: 239px;
+	}
+
+	.slider {
+		width: 400px;
+		height: 239px;
+	}
+
+	.headerwrap2 {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.logooffice {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.wraplogo {
+		border-right: none;
+	}
+
+	.aboutuswrap {
+		flex-direction: column;
+	}
+
+	.aboutuswrap__foto {
+		width: 80%;
+		justify-content: center;
+	}
+
+	.map {
+		margin-top: 140px;
+	}
+
+}
+
+@media (max-width: 670px) {
+
+	.footerwrap__left,
+	.footerwrap__right {
+		flex-direction: column;
+		padding: 10px 0;
+	}
+
+	.copyright {
+		padding-top: 1em;
+	}
+}
+
+@media (max-width: 555px) {
+
+	.headerwrap1 span,
+	.headerwrap1 a {
+		font-size: 1rem;
+	}
+
+	.navigation ul {
+		text-align: center;
+	}
+
+	.navigation a {
+		font-size: 1rem;
+	}
+
+	.headertext h1 {
+		font-size: 3.6rem;
+	}
+
+	.car__text h2,
+	.servicewrap h2,
+	.aboutuswrap__text h2 {
+		font-size: 2.6rem;
+	}
+
+	.right {
+		display: none;
+	}
+
+	.service__item {
+		width: 175px;
+		height: 10em;
+	}
+
+	.service__item i {
+		font-size: 30px;
+		margin-bottom: 0.5em;
+	}
+
+	.aboutuswrap__text {
+		width: 70%;
+	}
+
+	.aboutus .backside {
+		width: 90%;
+	}
+
+	.foto_item {
+		width: 125px;
+		height: 125px;
+	}
+
+	.map {
+		margin-top: 275px;
+	}
+}
+
+@media (max-width: 405px) {
+
+	.header__top-lang span {
+		margin: 0;
+	}
 }
